@@ -1,0 +1,100 @@
+<div *ngIf="viewMode; else editable">
+  <mat-card> <div></div>
+  <div *ngIf="produtoAtual.id">
+      
+      <div>
+        <label><strong>Nome:</strong></label> {{ produtoAtual.nome }}
+      </div>
+      <div>
+        <label><strong>Preço:</strong></label>
+        {{ produtoAtual.preco }} reais
+      </div>
+      <div class="foto">
+        <label><strong>Foto:</strong></label>
+        <img src="{{produtoAtual.foto}}" alt="" class="foto">
+      </div>
+      <br>
+      <br>
+      <button mat-raised-button color="accent"><a
+        class="id"
+        routerLink= "{{ produtoAtual.id }}"
+      >
+        Editar
+      </a></button>
+      <button class="com" mat-raised-button color="primary">Comprar</button>
+    </div></mat-card>
+    <div *ngIf="!produtoAtual">
+      <br />
+      <p>Please click on a Product...</p>
+    </div>
+  </div>
+  
+  <ng-template #editable>
+    <br>
+    <br>
+    <div *ngIf="produtoAtual.id" class="cardDetalhes">
+      
+<mat-card>
+      <h4>Produto: {{produtoAtual.nome}}</h4>
+      <form>
+        <div class="form">
+          <mat-form-field appearance="fill">
+          <mat-label for="nome">Nome</mat-label>
+          <input
+          matInput
+            type="text"
+            class="form"
+            id="nome"
+            [(ngModel)]="produtoAtual.nome"
+            name="nome"
+          /></mat-form-field>
+        </div>
+        <div class="form">
+        <mat-form-field appearance="fill">
+          <mat-label for="preco">Preço</mat-label>
+          <input
+          matInput
+            type="text"
+            class="form"
+            id="preco"
+            [(ngModel)]="produtoAtual.preco"
+            name="preco"
+          /></mat-form-field>
+        </div>
+        <div class="form">
+          <mat-form-field appearance="fill">
+            <mat-label for="foto">Foto</mat-label>
+            <input
+            matInput
+              type="text"
+              class="form"
+              id="foto"
+              [(ngModel)]="produtoAtual.foto"
+              name="foto"
+            /></mat-form-field>
+        </div>
+      
+      </form>
+    
+     
+      <div class="btn">
+      <button mat-raised-button color="warn" (click)="deleteProduct()">
+        <mat-icon >delete</mat-icon>
+      </button></div>
+      <div class="btn">
+      <button
+      mat-raised-button
+      color="primary"
+        type="submit"
+        class="badge badge-success mb-2"
+        (click)="updateProduct()"
+      >
+      Atualizar
+      </button></div>
+      <p class="btn">{{ message }}</p></mat-card>
+    </div>
+    <div *ngIf="!produtoAtual.id">
+      <br />
+      <h2><p>   Accessando Produto...</p></h2>
+    </div>
+  </ng-template>

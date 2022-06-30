@@ -1,0 +1,28 @@
+.list_row{
+width: 100%;
+height: 100%;
+background-color: darkgray;
+}
+
+.cardItens{width: fit-content;
+    height: fit-content;
+}
+
+
+    .segundaMetade{display: grid;
+        width: 100%;
+        height: auto;
+        
+    grid-template-columns: repeat(8, 1fr)}
+
+    .listProd{
+        grid-column: 4 / 5;
+        align-content: center;
+        
+    }
+
+     .det{max-width: 50px;
+    max-height: 50px;}
+
+    .novoProduto{margin-bottom: 15px;}
+          

@@ -1,0 +1,21 @@
+.geral{display: grid;
+    width: auto;
+   
+grid-template-columns: repeat(4, 1fr);        
+    justify-content: center;
+    padding-top: 50px;}
+
+
+.cardSalvar{display: flex;
+width: auto;
+height: auto;
+grid-column: 2 / 4;
+align-items: center;
+justify-content: center;}
+
+
+    .btn{display: flex;
+        align-content: center;
+    justify-content: center;}
+
+   

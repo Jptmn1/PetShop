@@ -1,0 +1,38 @@
+
+   <div id="app" class="container">
+    <mat-toolbar color="accent" class="navP">
+    
+      
+      <ul class="" routerLinkActive="active">
+        <button mat-raised-button color="warn" class="nav-item">
+          <a href="/home" class="nav-link" routerLink="home">Home </a>
+        </button>
+        
+        
+      </ul>
+      <ul class="" *ngIf="!isLoggedIn">
+        <button mat-raised-button color="warn" class="nav-item">
+          <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+        </button>
+
+        <button mat-raised-button color="warn" id="test" class="nav-item">
+          <a href="/login" class="nav-link" routerLink="login">Login</a>
+        </button>
+      </ul>
+      <ul class="" *ngIf="isLoggedIn">
+        <button mat-raised-button color="warn" class="nav-item">
+          <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+        </button>
+        <button mat-raised-button color="warn" class="nav-item">
+          <a href class="nav-link" (click)="logout()">LogOut</a>
+        </button>
+      </ul>
+      <div class="title">
+      <span><h1>Bem vindo ao Petshop Spring</h1></span>
+    </div>
+    </mat-toolbar>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  

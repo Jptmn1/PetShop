@@ -1,0 +1,40 @@
+
+
+<div class="list_row" id="list_row">
+  
+<br>
+
+    <div class="segundaMetade">
+      <div class="listProd">
+      <mat-card class="listProd1"><h4>Lista de produtos:</h4>
+      <mat-list>
+        <mat-list-item
+          class="cardItens"
+          *ngFor="let produto of produtos1; let i = index"
+          [class.active]="i == indexAtual"
+          (click)="setActiveProduct(produto, i)"
+        >
+          {{ produto.nome }}
+        </mat-list-item>
+      </mat-list>
+    <br>
+      <div class="novoProduto">
+      <button mat-raised-button color="accent"  > <a routerLink="/add">Novo Produto</a> </button>
+     </div>
+
+      <div class="removerProdutos">
+      <button mat-raised-button color="warn"  (click)="removeAllProducts()">
+        Remover todos
+      </button></div>
+    </mat-card></div>
+    
+    <div class="">
+    
+      <app-detalhes-prod class=""
+      [viewMode]="true"
+        [produtoAtual]="produtoAtual">
+
+      </app-detalhes-prod>
+    </div>
+  </div>
+  </div>

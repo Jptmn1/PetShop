@@ -1,0 +1,11 @@
+.col12{width: 100%;}
+
+.cardRegister{width: auto;
+height: auto;
+display: flex;
+justify-content: center;
+}
+
+.btn{display: flex;
+    align-content: center;
+justify-content: center;}

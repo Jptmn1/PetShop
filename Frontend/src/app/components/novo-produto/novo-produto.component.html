@@ -1,0 +1,57 @@
+<div class="geral">
+  <mat-card class="cardSalvar">
+    <div class="form">
+      <div *ngIf="!submitted">
+        <div class="form">
+          <mat-form-field appearance="fill">
+          <mat-label for="nome">Nome:</mat-label>
+          <input
+          matInput
+            type="text"
+            class="form"
+            id="nome"
+            required
+            [(ngModel)]="produto.nome"
+            name="nome"
+          /></mat-form-field>
+        </div>
+        <div class="form">
+        <mat-form-field appearance="fill">
+          <mat-label for="preco">Preço:</mat-label>
+          <input
+          matInput
+            class="form"
+            id="preco"
+            required
+            [(ngModel)]="produto.preco"
+            name="preco"
+            /></mat-form-field>
+        </div>
+
+       
+        
+       
+        <div class="form">
+        <mat-form-field appearance="fill">
+            <mat-label for="foto">Link da Foto:</mat-label>
+            <input
+            matInput type="text"
+            class="form"
+            id="foto"
+            required
+            [(ngModel)]="produto.foto"
+            name="foto">
+          </mat-form-field>
+        </div>
+        <div class="btn">
+        <button mat-raised-button color="primary" (click)="saveProduct()" class="btn">Salvar</button>
+      </div>
+      </div>
+      <div *ngIf="submitted">
+        <h4>Produto salvo com sucesso!</h4>
+        <div class="btn">
+        <button class="btn1" mat-raised-button color="primary" (click)="newProduct()">Novo produto</button></div>
+      </div>
+    </div>
+  </mat-card>
+  </div>

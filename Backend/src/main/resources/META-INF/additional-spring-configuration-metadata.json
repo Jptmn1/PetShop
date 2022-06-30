@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "petshop.app.jwtCookieName",
+    "type": "java.lang.String",
+    "description": "A description for 'petshop.app.jwtCookieName'"
+  },
+  {
+    "name": "petshop.app.jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'petshop.app.jwtSecret'"
+  },
+  {
+    "name": "petshop.app.jwtExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'petshop.app.jwtExpirationMs'"
+  },
+  {
+    "name": "petshop.app.jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'petshop.app.jwtSecret'"
+  },
+  {
+    "name": "petshop.app.jwtExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'petshop.app.jwtExpirationMs'"
+  },
+  {
+    "name": "petshop.app.jwtCookieName",
+    "type": "java.lang.String",
+    "description": "A description for 'petshop.app.jwtCookieName'"
+  },
+  {
+    "name": "petshop.app.jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'petshop.app.jwtSecret'"
+  }
+]}
