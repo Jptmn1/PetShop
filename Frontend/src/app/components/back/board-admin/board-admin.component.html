@@ -1,32 +1,32 @@
 <div class="container">
-    <header class="jumbotron">
+    <header class="">
       <p>{{ content }}</p>
     </header>
     <a>adicionar</a>
   </div>
   <div class="geral">
     <mat-card class="cardSalvar">
-      <div class="submit-form">
+      <div class="form">
         <div *ngIf="!submitted">
-          <div class="form-group">
+          <div class="form">
             <mat-form-field appearance="fill">
             <label for="nome">Nome:</label>
             <input
             matInput
               type="text"
-              class="form-control"
+              class="form"
               id="nome"
               required
               [(ngModel)]="produto.nome"
               name="nome"
             /></mat-form-field>
           </div>
-          <div class="form-group">
+          <div class="form">
           <mat-form-field appearance="fill">
             <label for="preco">Preço:</label>
             <input
             matInput
-              class="form-control"
+              class="form"
               id="preco"
               required
               [(ngModel)]="produto.preco"
@@ -35,14 +35,14 @@
           </div>
   
          
-          <!--<input type="file" id="file-input" #fileInput accept="image/*">-->
+          
          
-          <div class="form-group">
+          <div class="form">
           <mat-form-field appearance="fill">
               <label for="foto">Link da Foto:</label>
               <input
               matInput type="text"
-              class="form-control"
+              class="form"
               id="foto"
               required
               [(ngModel)]="produto.foto"
@@ -55,7 +55,7 @@
         </div>
         <div *ngIf="submitted">
           <h4>Produto salvo com sucesso!</h4>
-          <button class="btn btn-success" (click)="newProduct()">Novo produto</button>
+          <button class="btn" (click)="newProduct()">Novo produto</button>
         </div>
       </div>
     </mat-card>
